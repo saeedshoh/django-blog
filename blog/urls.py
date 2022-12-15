@@ -3,6 +3,6 @@ from django.urls import path
 from .views import *
 
 urlpatterns = [
-    path('', index, name='index'),
-    
+    path('', index, name='home'),
+    path('category/<str:slug>', get_category, name='categories.show')   
 ]
